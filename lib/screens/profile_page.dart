@@ -144,9 +144,12 @@ class ListItem extends StatelessWidget {
       ),
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: ListTile(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(100),
+        ),
         onTap: onPress,
-        leading: Icon(icon,
-            color: Theme.of(context).textTheme.titleLarge!.color),
+        leading:
+            Icon(icon, color: Theme.of(context).textTheme.titleLarge!.color),
         title: Text(
           title,
           style: TextStyle(
@@ -156,7 +159,7 @@ class ListItem extends StatelessWidget {
         contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
         // style: ListTileStyle.list,
         trailing: trailings
-            ?  Icon(
+            ? Icon(
                 Icons.arrow_forward,
                 color: Theme.of(context).textTheme.titleLarge!.color,
               )
